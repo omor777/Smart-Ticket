@@ -13,3 +13,15 @@ function showElementById(id) {
 function hideElementById(id) {
   document.getElementById(id).classList.add("hidden");
 }
+
+function setBackgroundColorById(id) {
+  document.getElementById(id).classList.add("bg-[#1DD100]", "text-white");
+}
+
+function removeAttributeById(id) {
+  document.getElementById(id).removeAttribute("disabled");
+}
+
+function setAttributeById(id) {
+  document.getElementById(id).setAttribute("disabled", true);
+}
