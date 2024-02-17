@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Smart Ticket</title>
+    <!-- link css -->
+    <link rel="stylesheet" href="css/style.css" />
+    <!-- Tailwind and daisyUI cdn link -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@4.7.2/dist/full.min.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Tailwind config script -->
+    <script>
+      tailwind.config = {
+        theme: {
+          screens: {
+            sm: "640px",
+            md: "768px",
+            lg: "1024px",
+            xl: "1170px",
+          },
+          extend: {
+            container: {
+              center: true,
+            },
+            colors: {
+              primary: "#1DD100",
+              orange1: "#FFBF0F",
+              pink300: "#F78C9C",
+              white300: "#F7F8F8",
+              gray100: "#0307121A",
+              black300: "#030712",
+            },
+          },
+        },
+      };
+    </script>
+  </head>
+  <body class="inter-font">
+    <header class="container">
+      <nav class="flex items-center justify-between mt-14">
+        <h3 class="text-[#030712] raleway-font font-extrabold text-4xl">
+          P-Ticket
+        </h3>
+        <ul class="flex items-center gap-14">
+          <li>
+            <a class="text-[#030712B2] text-lg font-medium" href="#">Home</a>
+          </li>
+          <li>
+            <a class="text-[#030712B2] text-lg font-medium" href="#">About</a>
+          </li>
+          <li>
+            <a class="text-[#030712B2] text-lg font-medium" href="#"
+              >Destination</a
+            >
+          </li>
+          <li>
+            <a class="text-[#030712B2] text-lg font-medium" href="#">Search</a>
+          </li>
+        </ul>
+        <button
+          class="flex items-center gap-[10px] py-4 px-[30px] border border-primary bg-[#1DD1001A] rounded-xl text-primary text-xl raleway-font font-bold"
+        >
+          Bus
+          <img src="./images/bus-icon.png" alt="bus-icon" />
+        </button>
+      </nav>
+    </header>
+    <main></main>
+    <footer></footer>
+    <!-- js script -->
+    <script src="js/utility.js"></script>
+    <script src="js/script.js"></script>
+  </body>
+</html>
