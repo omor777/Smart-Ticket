@@ -15,6 +15,9 @@ function main() {
   console.log(phoneNumberInput.value);
   const nextButton = document.getElementById("next-btn");
   const modal = document.getElementById("modal-show");
+  const menu = document.getElementById("menu-items");
+  const toggleBtn = document.getElementById("toggle-btn");
+
   for (const seat of allSeats) {
     seat.addEventListener("click", function (e) {
       // max ticket buy
@@ -129,4 +132,9 @@ function main() {
       modal.classList.remove("top-[60%]");
       modal.classList.add("scale-0");
     });
+
+  //toggle menu
+  toggleBtn.addEventListener("click", function () {
+    menu.classList.toggle("max-h-80");
+  });
 }
