@@ -128,8 +128,8 @@ function main() {
   document
     .getElementById("close-modal-btn")
     .addEventListener("click", function () {
+      hideElementById("modal-show");
       modal.classList.remove("top-[60%]");
       modal.classList.add("scale-0");
     });
 }
-
