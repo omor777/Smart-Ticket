@@ -11,7 +11,10 @@ function main() {
   const allSeats = document.getElementsByClassName("seat");
   const couponCodeApplyBtn = document.getElementById("coupon-code-apply-btn");
   const couponCodeInputField = document.getElementById("coupon-code-input");
-
+  const phoneNumberInput = document.getElementById("phone-number");
+  console.log(phoneNumberInput.value);
+  const nextButton = document.getElementById("next-btn");
+  const modal = document.getElementById("modal-show");
   for (const seat of allSeats) {
     seat.addEventListener("click", function (e) {
       // max ticket buy
@@ -43,6 +46,9 @@ function main() {
         //update seat name class and price
         updateSeatNameAndPrice(e.target.innerText);
 
+        //handle number input field  and next button
+        handleNumberField();
+
         //enable coupon apply button
         if (maxTicketBuy === 4) {
           removeAttributeById("coupon-code-apply-btn");
@@ -53,7 +59,12 @@ function main() {
 
   //update grand total an discount price
   couponCodeApplyBtn.addEventListener("click", function (e) {
-    const couponCode = couponCodeInputField.value;
+    const couponCode = couponCodeInputField.value
+      .split(" ")
+      .join("")
+      .toUpperCase();
+
+    console.log(couponCode);
     if (couponCode === "NEW15") {
       const totalPrice = parseInt(getInnerText("total-price"));
       const discountPrice = totalPrice * 0.15;
@@ -62,12 +73,37 @@ function main() {
       showElementById("discount-container");
       setInnerText("discount-price", discountPrice);
       setInnerText("grand-total", grandTotalPrice);
-    } else if (couponCode === "Couple 20") {
-      console.log("valid couple");
+    } else if (couponCode === "COUPLE20") {
+      const totalPrice = parseInt(getInnerText("total-price"));
+      const discountPrice = totalPrice * 0.2;
+      const grandTotalPrice = totalPrice - discountPrice;
+      hideElementById("coupon-code-container");
+      showElementById("discount-container");
+      setInnerText("discount-price", discountPrice);
+      setInnerText("grand-total", grandTotalPrice);
     } else {
       alert("Invalid coupon code!");
     }
   });
+
+  // handle next button
+  nextButton.addEventListener("click", function (e) {
+    e.preventDefault();
+    modal.classList.add("top-[65%]");
+    modal.classList.remove("scale-0");
+  });
+
+  //handle number input field  and next button
+  function handleNumberField() {
+    const pNumber = phoneNumberInput.value;
+
+    if (pNumber.length > 0 && maxTicketBuy > 0) {
+      removeAttributeById("next-btn");
+    } else {
+      setAttributeById("next-btn");
+    }
+  }
+  phoneNumberInput.addEventListener("keyup", handleNumberField);
 
   function updateSeatNameAndPrice(seatName) {
     const ticketTitleContainer = document.getElementById(
@@ -88,4 +124,11 @@ function main() {
     div.appendChild(p3);
     ticketTitleContainer.appendChild(div);
   }
+  //close modal
+  document
+    .getElementById("close-modal-btn")
+    .addEventListener("click", function () {
+      modal.classList.remove("top-[65%]");
+      modal.classList.add("scale-0");
+    });
 }

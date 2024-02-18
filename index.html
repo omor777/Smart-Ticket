@@ -48,7 +48,7 @@
       }
     </style>
   </head>
-  <body class="inter-font">
+  <body class="inter-font relative">
     <header class="container">
       <nav class="flex items-center justify-between mt-14">
         <h3 class="text-[#030712] raleway-font font-extrabold text-4xl">
@@ -692,10 +692,12 @@
                   </div>
                 </div>
                 <!-- coupon apply -->
-                <div id="coupon-code-container"
+                <div
+                  id="coupon-code-container"
                   class="bg-white w-full rounded-xl overflow-hidden flex items-center justify-between h-14 pr-2 mt-4"
                 >
-                  <input id="coupon-code-input"
+                  <input
+                    id="coupon-code-input"
                     class="outline-none pl-5 h-full placeholder:text-sm placeholder:text-[#03071266]"
                     type="text"
                     placeholder="Have any copupon?"
@@ -721,13 +723,15 @@
                 <label class="font-semibold text-black300" for="name"
                   >Passenger Name*</label
                 >
-                <input 
+                <input
                   class="py-5 px-6 rounded-xl border border-[#0307121A] placeholder:text-[#03071266] outline-none"
                   type="text"
                   id="name"
                   placeholder="Enter your name"
                 />
-                <label class="font-semibold mt-2 text-black300" for="phone-number"
+                <label
+                  class="font-semibold mt-2 text-black300"
+                  for="phone-number"
                   >Phone Number*</label
                 >
                 <input
@@ -765,8 +769,73 @@
           </div>
         </div>
       </section>
+
+      <!-- modal -->
+      <section
+        id="modal-show"
+        class="container absolute top-0 left-1/2 translate-y-1/2 -translate-x-1/2 z-50 scale-0 duration-500"
+      >
+        <div
+          class="w-full max-w-[718px] min-h-[481px] mx-auto rounded-2xl bg-white py-14 px-16 flex flex-col items-center shadow-xl"
+        >
+          <img src="./images/success.png" />
+          <h3
+            class="uppercase font-bold mt-9 text-[#27AE60] text-2xl text-center"
+          >
+            success
+          </h3>
+          <p class="text-[#4A4A4A] mt-9 font-medium text-xl text-center">
+            Thank you for Booking Our Bus Seats. We are working hard to find the
+            best service and deals for you.
+          </p>
+          <p class="text-[#4A4A4A] text-xl font-light mt-2">
+            Shortly you will find a confirmation in your email.
+          </p>
+          <button
+            id="close-modal-btn"
+            class="bg-[#27AE60] rounded-[32px] px-20 py-5 text-white text-xl font-semibold mt-5"
+          >
+            Continue
+          </button>
+        </div>
+      </section>
     </main>
-    <footer></footer>
+    <footer class="bg-black300 py-28">
+      <div class="container">
+        <div class="flex items-center justify-between">
+          <div>
+            <h3 class="font-extrabold text-white raleway-font text-4xl">
+              P-Ticket
+            </h3>
+            <p class="text-lg mt-3 text-[#FFFFFFCC] leading-8 max-w-[374px]">
+              P-Ticket is a digital platform to make your daily commuting
+              better.
+            </p>
+          </div>
+          <div class="flex flex-col items-center gap-5">
+            <p class="font-semibold text-white raleway-font text-xl">
+              Download our app
+            </p>
+            <img class="cursor-pointer" src="./images/playstore.svg" />
+          </div>
+        </div>
+
+        <div class="w-full border mt-12 border-dashed border-[#FFFFFF4D]"></div>
+
+        <div class="flex items-center justify-between mt-8">
+          <p class="text-[#FFFFFFB2]">
+            @all rights reserved, P-Ticket services limited.2024
+          </p>
+          <div class="flex items-center gap-8">
+            <a class="font-medium text-white" href="#">Terms & condition</a>
+            <a class="font-medium text-white" href="#"
+              >Return & refund policy</a
+            >
+            <a class="font-medium text-white" href="#">Privacy policy</a>
+          </div>
+        </div>
+      </div>
+    </footer>
     <!-- js script -->
     <script src="js/utility.js"></script>
     <script src="js/script.js"></script>
