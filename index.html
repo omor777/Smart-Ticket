@@ -132,18 +132,18 @@
     </header>
     <main>
       <!-- hero section -->
-      <section class="container mt-8 px-4 lg:px-0 hidden">
+      <section class="container mt-8 px-4 lg:px-0">
         <div
-          class="bg-[linear-gradient(180deg,_rgba(3,7,18,0.50)_0%,rgba(3,7,18,0.00)_100%),url(./images/banner.png)] min-h-[550px] rounded-[2rem] bg-no-repeat bg-center bg-cover"
+          class="bg-[linear-gradient(180deg,_rgba(3,7,18,0.50)_0%,rgba(3,7,18,0.00)_100%),url(./images/banner.png)] min-h-[550px] rounded-[2rem] bg-no-repeat bg-center bg-cover flex flex-col lg:block justify-center"
         >
           <h1
-            class="text-center text-white raleway-font text-[1.75rem] lg:text-[4rem] font-extrabold lg:leading-[5.375rem] pt-[70px]"
+            class="text-center text-white raleway-font text-4xl lg:text-[4rem] font-extrabold lg:leading-[5.375rem] leading-[3rem] lg:pt-[70px]"
           >
             End-to-End Travel with <br />
             <span class="text-primary">P Paribahan</span>
           </h1>
           <p
-            class="text-white mt-2 lg:mt-0 text-center lg:text-lg leading-[30px] lg:w-2/3 mx-auto"
+            class="text-white mt-2 lg:mt-0 text-center lg:text-lg w-11/12 leading-[30px] lg:w-2/3 mx-auto"
           >
             Yes, you can run unit tests and view the results directly within the
             app. The integrated testing features allow for a streamlined .
@@ -152,7 +152,7 @@
           <div class="flex items-center justify-center">
             <a
               href="#ph-paribahan"
-              class="py-3 lg:py-5 px-5 lg:px-8 bg-primary rounded-xl lg:text-xl raleway-font font-bold mt-8"
+              class="py-5 px-8 bg-primary rounded-xl text-xl raleway-font font-bold mt-8"
             >
               Buy Ticket
             </a>
@@ -168,10 +168,10 @@
           >
             <img src="./images/people.png" />
             <div>
-              <h2 class="font-bold text-2xl lg:text-4xl text-black300">
+              <h2 class="font-bold text-3xl lg:text-4xl text-black300">
                 500K+
               </h2>
-              <p class="lg:text-lg mt-2 text-[#03071299]">Registered users</p>
+              <p class="text-lg mt-2 text-[#03071299]">Registered users</p>
             </div>
           </div>
 
@@ -181,10 +181,10 @@
           >
             <img src="./images/ticket-cupon.png" />
             <div>
-              <h2 class="font-bold text-2xl lg:text-4xl text-black300">
+              <h2 class="font-bold text-3xl lg:text-4xl text-black300">
                 1.7 lacks
               </h2>
-              <p class="lg:text-lg mt-2 text-[#03071299]">Tickets sold</p>
+              <p class="text-lg mt-2 text-[#03071299]">Tickets sold</p>
             </div>
           </div>
 
@@ -194,14 +194,14 @@
           >
             <img src="./images/stoppage.png" />
             <div>
-              <h2 class="font-bold text-2xl lg:text-4xl text-black300">80K+</h2>
-              <p class="lg:text-lg mt-2 text-[#03071299]">Rental partners</p>
+              <h2 class="font-bold text-3xl lg:text-4xl text-black300">80K+</h2>
+              <p class="text-lg mt-2 text-[#03071299]">Rental partners</p>
             </div>
           </div>
         </div>
       </section>
       <!-- Best offer section -->
-      <section class="container mt-48 px-4 lg:px-0 hidden">
+      <section class="container mt-48 px-4 lg:px-0">
         <div>
           <h3
             class="text-[#030712] text-[40px] raleway-font font-bold text-center"
@@ -227,9 +227,7 @@
                   alt=""
                 />
               </div>
-              <div
-                class="flex flex-col items-center col-span-2 relative sm:before:size-0 sm:after:size-0 before:absolute before:size-6 before:bg-white before:rounded-full before:-top-[110%] before:right-[98%] after:size-6 after:bg-white after:rounded-full after:absolute after:right-[98%] after:bottom-[-110%]"
-              >
+              <div class="flex flex-col items-center">
                 <h3 class="text-[#030712] raleway-font text-[32px] font-bold">
                   NEW15
                 </h3>
@@ -281,7 +279,7 @@
       <!-- Poribahan section -->
       <section
         id="ph-paribahan"
-        class="mt-[120px] bg-white300 border-t-2 border-t-primary rounded-t-[88px] pb-10"
+        class="mt-[120px] bg-white300 border-t-2 border-t-primary rounded-t-[88px] pb-10 px-4 lg:px-0"
       >
         <div class="container">
           <h3
@@ -289,32 +287,34 @@
           >
             P.H Paribahan
           </h3>
-          <p class="w-2/3 mx-auto text-lg leading-8 text-center mt-2">
+          <p
+            class="lg:w-2/3 w-11/12 mx-auto text-lg leading-8 text-center mt-2"
+          >
             Yes, you can run unit tests and view the results directly within the
             app. The integrated testing features allow for a streamlined .
           </p>
           <!-- ticket container -->
           <div
-            class="flex items-center justify-between mt-12 bg-white p-8 rounded-3xl relative"
+            class="grid grid-cols-1 lg:grid-cols-12 mt-12 gap-12 items-center bg-white p-8 rounded-3xl relative"
           >
             <!-- left part -->
-            <div>
+            <div class="lg:col-span-8 col-span-12 order-2 lg:order-1">
               <div class="flex items-center justify-between">
-                <div class="flex items-center gap-4">
+                <div class="flex items-center flex-wrap gap-4">
                   <img src="./images/bus-logo.png" alt="" />
                   <div>
                     <h3
-                      class="text-black300 raleway-font text-[32px] font-bold"
+                      class="text-black300 raleway-font text-2xl lg:text-[32px] font-bold"
                     >
                       Greenline Paribahan
                     </h3>
-                    <p class="text-[#03071299] text-lg">
+                    <p class="text-[#03071299] text-sm lg:text-lg mt-2">
                       Coach-009-WEB ! AC_Business
                     </p>
                   </div>
                 </div>
                 <button
-                  class="text-lg font-medium text-primary flex items-center gap-1 rounded-xl bg-[#1DD10026] p-[17px]"
+                  class="lg:text-lg font-medium text-primary flex items-center gap-1 rounded-xl bg-[#1DD10026] p-3 lg:p-[17px]"
                 >
                   <img src="./images/seat-green-filled.png" />
                   <span id="seat-left">40</span> Seats left
@@ -324,11 +324,13 @@
               <div class="mt-6 rounded-3xl bg-white300 p-8">
                 <div class="flex items-center justify-between">
                   <p
-                    class="text-[#03071299] text-lg font-semibold raleway-font"
+                    class="text-[#03071299] lg:text-lg font-semibold raleway-font"
                   >
                     Route
                   </p>
-                  <p class="text-black300 text-lg raleway-font font-semibold">
+                  <p
+                    class="text-black300 lg:text-lg raleway-font font-semibold"
+                  >
                     Dhaka - Sylhet
                   </p>
                 </div>
@@ -337,11 +339,13 @@
 
                 <div class="flex items-center justify-between mt-6">
                   <p
-                    class="text-[#03071299] text-lg font-semibold raleway-font"
+                    class="text-[#03071299] lg:text-lg font-semibold raleway-font"
                   >
                     Departure Time
                   </p>
-                  <p class="text-black300 text-lg raleway-font font-semibold">
+                  <p
+                    class="text-black300 lg:text-lg raleway-font font-semibold"
+                  >
                     9:00 PM
                   </p>
                 </div>
@@ -350,17 +354,17 @@
                 <!-- button container -->
                 <div class="flex items-center justify-between gap-6 mt-6">
                   <button
-                    class="text-[#030712CC] font-medium p-[17px] rounded-xl bg-[#0307120D]"
+                    class="text-[#030712CC] font-medium p-3 text-sm lg:text-base lg:p-[17px] rounded-xl bg-[#0307120D]"
                   >
                     Boarding Point - Laxmipur
                   </button>
                   <button
-                    class="text-[#030712CC] font-medium p-[17px] rounded-xl bg-[#0307120D]"
+                    class="text-[#030712CC] font-medium p-3 text-sm lg:text-base lg:p-[17px] rounded-xl bg-[#0307120D]"
                   >
                     Dropping Point - Bogura
                   </button>
                   <button
-                    class="text-[#030712CC] font-medium p-[17px] rounded-xl bg-[#0307120D]"
+                    class="text-[#030712CC] font-medium p-3 text-sm lg:text-base lg:p-[17px] rounded-xl bg-[#0307120D]"
                   >
                     Est. Time - 11 Hour
                   </button>
@@ -368,11 +372,13 @@
               </div>
             </div>
             <!-- divider -->
-            <div class="absolute top-0 right-[21%]">
-              <img class="h-[444px]" src="./images/info-devider.png" />
+            <div class="absolute lg:top-0 lg:right-[25%] hidden lg:block">
+              <img class="h-[467px]" src="./images/info-devider.png" />
             </div>
             <!-- right -->
-            <div class="flex flex-col items-center pr-8">
+            <div
+              class="flex flex-col items-center lg:pr-8 lg:col-span-4 col-span-12 order-1 lg:order-2"
+            >
               <img src="./images/fare.png" />
               <h3 class="text-[2rem] font-bold text-black300 raleway-font mt-4">
                 550 Taka
@@ -389,7 +395,7 @@
             class="grid grid-cols-1 lg:grid-cols-12 gap-16 p-8 rounded-3xl bg-white mt-7"
           >
             <!-- left -->
-            <div class="lg:col-span-7">
+            <div class="lg:col-span-7 pl-4 lg:pl-0">
               <h3 class="text-black300 raleway-font text-2xl font-semibold">
                 Select Your Seat
               </h3>
