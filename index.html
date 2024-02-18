@@ -132,7 +132,7 @@
     </header>
     <main>
       <!-- hero section -->
-      <section class="container mt-8 px-4 lg:px-0">
+      <section class="container mt-8 px-4 lg:px-0 hidden">
         <div
           class="bg-[linear-gradient(180deg,_rgba(3,7,18,0.50)_0%,rgba(3,7,18,0.00)_100%),url(./images/banner.png)] min-h-[550px] rounded-[2rem] bg-no-repeat bg-center bg-cover"
         >
@@ -201,7 +201,7 @@
         </div>
       </section>
       <!-- Best offer section -->
-      <section class="container mt-48 hidden">
+      <section class="container mt-48 px-4 lg:px-0">
         <div>
           <h3
             class="text-[#030712] text-[40px] raleway-font font-bold text-center"
@@ -209,7 +209,7 @@
             Best offers for you
           </h3>
           <!-- discount coupon -->
-          <div class="grid grid-cols-2 gap-6 mt-12">
+          <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-6 mt-12">
             <div
               class="bg-orange100 rounded-3xl p-[52px] relative flex items-center justify-between"
             >
@@ -220,14 +220,16 @@
                   use by January 2024
                 </p>
               </div>
-              <div class="absolute top-0 right-[37%]">
+              <div class="absolute h-full top-0 right-[35%]">
                 <img
                   class="h-[245px]"
                   src="./images/cupon-devider.png"
                   alt=""
                 />
               </div>
-              <div class="flex flex-col items-center">
+              <div
+                class="flex flex-col items-center col-span-2 relative sm:before:size-0 sm:after:size-0 before:absolute before:size-6 before:bg-white before:rounded-full before:-top-[110%] before:right-[98%] after:size-6 after:bg-white after:rounded-full after:absolute after:right-[98%] after:bottom-[-110%]"
+              >
                 <h3 class="text-[#030712] raleway-font text-[32px] font-bold">
                   NEW15
                 </h3>
@@ -238,6 +240,7 @@
                 </p>
               </div>
             </div>
+            <!--  -->
             <div
               class="bg-pink300 rounded-3xl p-[52px] relative flex items-center justify-between"
             >
@@ -248,7 +251,7 @@
                   use by January 2024
                 </p>
               </div>
-              <div class="absolute top-0 right-[37%]">
+              <div class="absolute h-full top-0 right-[35%]">
                 <img
                   class="h-[245px]"
                   src="./images/cupon-devider.png"
@@ -269,7 +272,7 @@
           </div>
 
           <button
-            class="text-primary text-xl raleway-font font-bold py-5 px-[30px] rounded-xl border border-primary mt-16 block mx-auto"
+            class="text-primary text-xl raleway-font font-bold py-5 px-[30px] rounded-xl border border-primary mt-16 block mx-auto duration-300 hover:bg-primary hover:text-white"
           >
             See All Offers
           </button>
