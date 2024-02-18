@@ -89,7 +89,7 @@ function main() {
   // handle next button
   nextButton.addEventListener("click", function (e) {
     e.preventDefault();
-    modal.classList.add("top-[65%]");
+    modal.classList.add("top-[60%]");
     modal.classList.remove("scale-0");
   });
 
@@ -128,7 +128,8 @@ function main() {
   document
     .getElementById("close-modal-btn")
     .addEventListener("click", function () {
-      modal.classList.remove("top-[65%]");
+      modal.classList.remove("top-[60%]");
       modal.classList.add("scale-0");
     });
 }
+
