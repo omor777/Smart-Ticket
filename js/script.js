@@ -42,6 +42,7 @@ function main() {
         const totalPrice = getInnerText("total-price");
         const updatedTotalPrice = parseInt(totalPrice) + perTicketPrice;
         setInnerText("total-price", updatedTotalPrice);
+        setInnerText("grand-total", updatedTotalPrice);
 
         //update seat name class and price
         updateSeatNameAndPrice(e.target.innerText);
@@ -59,11 +60,7 @@ function main() {
 
   //update grand total an discount price
   couponCodeApplyBtn.addEventListener("click", function (e) {
-    const couponCode = couponCodeInputField.value
-      .split(" ")
-      .join("")
-      .toUpperCase();
-
+    const couponCode = couponCodeInputField.value;
     console.log(couponCode);
     if (couponCode === "NEW15") {
       const totalPrice = parseInt(getInnerText("total-price"));
@@ -73,7 +70,7 @@ function main() {
       showElementById("discount-container");
       setInnerText("discount-price", discountPrice);
       setInnerText("grand-total", grandTotalPrice);
-    } else if (couponCode === "COUPLE20") {
+    } else if (couponCode === "Couple 20") {
       const totalPrice = parseInt(getInnerText("total-price"));
       const discountPrice = totalPrice * 0.2;
       const grandTotalPrice = totalPrice - discountPrice;
