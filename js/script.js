@@ -10,6 +10,8 @@ function main() {
   const seatClass = "Economy";
   const allSeats = document.getElementsByClassName("seat");
   const couponCodeApplyBtn = document.getElementById("coupon-code-apply-btn");
+  const couponCodeInputField = document.getElementById("coupon-code-input");
+
   for (const seat of allSeats) {
     seat.addEventListener("click", function (e) {
       // max ticket buy
@@ -48,6 +50,24 @@ function main() {
       }
     });
   }
+
+  //update grand total an discount price
+  couponCodeApplyBtn.addEventListener("click", function (e) {
+    const couponCode = couponCodeInputField.value;
+    if (couponCode === "NEW15") {
+      const totalPrice = parseInt(getInnerText("total-price"));
+      const discountPrice = totalPrice * 0.15;
+      const grandTotalPrice = totalPrice - discountPrice;
+      hideElementById("coupon-code-container");
+      showElementById("discount-container");
+      setInnerText("discount-price", discountPrice);
+      setInnerText("grand-total", grandTotalPrice);
+    } else if (couponCode === "Couple 20") {
+      console.log("valid couple");
+    } else {
+      alert("Invalid coupon code!");
+    }
+  });
 
   function updateSeatNameAndPrice(seatName) {
     const ticketTitleContainer = document.getElementById(

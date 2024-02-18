@@ -683,8 +683,8 @@
                   </p>
                 </div>
                 <!-- discount price -->
-                <div class="hidden">
-                  <div class="flex items-center justify-between mt-4">
+                <div id="discount-container" class="hidden">
+                  <div class="flex items-center justify-between mt-6">
                     <p class="font-medium text-black300">Discount Price</p>
                     <p class="font-medium text-black300">
                       BDT <span id="discount-price">0</span>
@@ -692,10 +692,10 @@
                   </div>
                 </div>
                 <!-- coupon apply -->
-                <div
+                <div id="coupon-code-container"
                   class="bg-white w-full rounded-xl overflow-hidden flex items-center justify-between h-14 pr-2 mt-4"
                 >
-                  <input
+                  <input id="coupon-code-input"
                     class="outline-none pl-5 h-full placeholder:text-sm placeholder:text-[#03071266]"
                     type="text"
                     placeholder="Have any copupon?"
@@ -721,28 +721,28 @@
                 <label class="font-semibold text-black300" for="name"
                   >Passenger Name*</label
                 >
-                <input
+                <input 
                   class="py-5 px-6 rounded-xl border border-[#0307121A] placeholder:text-[#03071266] outline-none"
                   type="text"
                   id="name"
                   placeholder="Enter your name"
                 />
-                <label class="font-semibold mt-2 text-black300" for="name"
+                <label class="font-semibold mt-2 text-black300" for="phone-number"
                   >Phone Number*</label
                 >
                 <input
-                  class="py-5 px-6 rounded-xl border border-[#0307121A] placeholder:text-[#03071266] outline-none"
-                  type="text"
-                  id="name"
+                  class="py-5 px-6 rounded-xl border border-[#0307121A] placeholder:text-[#03071266] outline-none appearance-none"
+                  type="number"
+                  id="phone-number"
                   placeholder="Enter your phone number"
                 />
-                <label class="font-semibold mt-2 text-black300" for="name"
+                <label class="font-semibold mt-2 text-black300" for="email"
                   >Email ID</label
                 >
                 <input
                   class="py-5 px-6 rounded-xl border border-[#0307121A] placeholder:text-[#03071266] outline-none"
                   type="text"
-                  id="name"
+                  id="email"
                   placeholder="Enter your email id"
                 />
                 <button
