@@ -135,6 +135,7 @@ function main() {
 
   //toggle menu
   toggleBtn.addEventListener("click", function () {
+    document.getElementById("hero-section").classList.toggle("pt-52");
     menu.classList.toggle("max-h-80");
   });
 }

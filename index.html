@@ -52,7 +52,7 @@
     <header class="container px-4 lg:px-0">
       <nav class="flex items-center justify-between mt-6 lg:mt-14">
         <h3
-          class="text-[#030712] raleway-font font-bold lg:font-extrabold text-3xl lg:text-4xl relative"
+          class="text-[#030712] raleway-font font-bold lg:font-extrabold text-4xl relative"
         >
           P-Ticket
         </h3>
@@ -81,7 +81,7 @@
         <!-- mobile menu -->
         <ul
           id="menu-items"
-          class="items-center gap-4 absolute top-14 left-0 flex flex-col justify-center w-full max-h-0 overflow-hidden duration-500 max-h"
+          class="items-center gap-4 absolute top-14 left-0 flex flex-col justify-center w-full max-h-0 overflow-hidden duration-500 ease-out max-h"
         >
           <li>
             <a class="text-[#030712B2] lg:text-lg font-medium" href="#">Home</a>
@@ -132,7 +132,10 @@
     </header>
     <main>
       <!-- hero section -->
-      <section class="container mt-8 px-4 lg:px-0">
+      <section
+        id="hero-section"
+        class="container mt-8 px-4 lg:px-0 duration-300"
+      >
         <div
           class="bg-[linear-gradient(180deg,_rgba(3,7,18,0.50)_0%,rgba(3,7,18,0.00)_100%),url(./images/banner.png)] min-h-[550px] rounded-[2rem] bg-no-repeat bg-center bg-cover flex flex-col lg:block justify-center"
         >
