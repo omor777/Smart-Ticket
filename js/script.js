@@ -12,9 +12,7 @@ function main() {
   const couponCodeApplyBtn = document.getElementById("coupon-code-apply-btn");
   const couponCodeInputField = document.getElementById("coupon-code-input");
   const phoneNumberInput = document.getElementById("phone-number");
-  console.log(phoneNumberInput.value);
   const nextButton = document.getElementById("next-btn");
-  const modal = document.getElementById("modal-show");
   const menu = document.getElementById("menu-items");
   const toggleBtn = document.getElementById("toggle-btn");
 
@@ -89,8 +87,7 @@ function main() {
   // handle next button
   nextButton.addEventListener("click", function (e) {
     e.preventDefault();
-    modal.classList.add("top-[60%]");
-    modal.classList.remove("scale-0");
+    window.location.replace("modal.html");
   });
 
   //handle number input field  and next button
@@ -124,14 +121,6 @@ function main() {
     div.appendChild(p3);
     ticketTitleContainer.appendChild(div);
   }
-  //close modal
-  document
-    .getElementById("close-modal-btn")
-    .addEventListener("click", function () {
-      hideElementById("modal-show");
-      modal.classList.remove("top-[60%]");
-      modal.classList.add("scale-0");
-    });
 
   //toggle menu
   toggleBtn.addEventListener("click", function () {

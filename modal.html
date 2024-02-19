@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html class="scroll-smooth" lang="en" data-theme="light">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Smart Ticket</title>
+    <!-- link css -->
+    <link rel="stylesheet" href="css/style.css" />
+    <!-- Tailwind and daisyUI cdn link -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@4.7.2/dist/full.min.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Tailwind config script -->
+    <script>
+      tailwind.config = {
+        theme: {
+          screens: {
+            sm: "640px",
+            md: "768px",
+            lg: "1024px",
+            xl: "1170px",
+          },
+          extend: {
+            container: {
+              center: true,
+            },
+            colors: {
+              primary: "#1DD100",
+              orange100: "#FFBF0F",
+              pink300: "#F78C9C",
+              white300: "#F7F8F8",
+              gray100: "#0307121A",
+              black300: "#030712",
+            },
+          },
+        },
+      };
+    </script>
+    <!-- tailwind directive -->
+    <style type="text/tailwindcss">
+      @layer components {
+        .ticket-title {
+          @apply flex items-center justify-between *:text-[#03071299];
+        }
+      }
+    </style>
+  </head>
+  <body class="inter-font">
+    <!-- modal -->
+    <section
+      id="modal-show"
+      class="absolute grid place-items-center top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 bg-white300 h-screen w-full"
+    >
+      <div
+        class="w-full max-w-[718px] h-[481px] mx-auto rounded-2xl bg-white py-14 px-16 flex flex-col items-center shadow-xl"
+      >
+        <img src="./images/success.png" />
+        <h3
+          class="uppercase font-bold mt-9 text-[#27AE60] text-2xl text-center"
+        >
+          success
+        </h3>
+        <p class="text-[#4A4A4A] mt-9 font-medium text-xl text-center">
+          Thank you for Booking Our Bus Seats. We are working hard to find the
+          best service and deals for you.
+        </p>
+        <p class="text-[#4A4A4A] text-xl font-light mt-2">
+          Shortly you will find a confirmation in your email.
+        </p>
+        <button
+          id="close-modal-btn"
+          class="bg-[#27AE60] rounded-[32px] px-20 py-5 text-white text-xl font-semibold mt-5"
+        >
+          Continue
+        </button>
+      </div>
+    </section>
+    <script>
+      document
+        .getElementById("close-modal-btn")
+        .addEventListener("click", function () {
+          window.location.replace("index.html");
+        });
+    </script>
+  </body>
+</html>
